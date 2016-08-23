@@ -395,7 +395,7 @@ install_astpp ()
 			systemctl disable apache2
 			apt-get -o Acquire::Check-Valid-Until=false update
 			apt-get install -y curl libyuv-dev libvpx2-dev nginx php5-fpm php5 php5-mcrypt libmyodbc unixodbc-bin php5-dev php5-common php5-cli php5-gd php-pear php5-cli php-apc php5-curl libxml2 libxml2-dev openssl libcurl4-openssl-dev gettext gcc g++
-		elif  [ ${DIST} = "CENTOS" ]; then
+			apt-get install -y autoconf automake devscripts g++ gawk gettext git-core libcurl4-openssl-dev libdb-dev libedit-dev libgdbm-dev 'libjpeg-dev|libjpeg62-turbo-dev' libldns-dev libncurses5-dev libopus-dev libopus-ocaml libpcre3-dev libperl-dev libpq-dev libsndfile-dev libspeex-dev libspeexdsp-dev libsqlite3-dev libssl-dev libtiff5-dev 'libtool-bin|libtool' make python-dev pkg-config yasm		elif  [ ${DIST} = "CENTOS" ]; then
 			# Install ASTPP pre-requisite packages using YUM
 			yum install -y autoconf automake bzip2 cpio curl nginx php-fpm php-mcrypt* unixODBC mysql-connector-odbc curl-devel php php-devel php-common php-cli php-gd php-pear php-mysql php-pdo php-pecl-json mysql mariadb-server mysql-devel libxml2 libxml2-devel openssl openssl-devel gettext-devel fileutils gcc-c++ httpd httpd-devel
 		fi	
